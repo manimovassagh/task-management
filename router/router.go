@@ -20,6 +20,13 @@ func SetupRoutes(r *gin.Engine) {
 		c.JSON(http.StatusOK, tasks)
 	})
 
+	r.GET("/", func(c *gin.Context) {
+
+		c.JSON(http.StatusOK, gin.H{
+			"status": "healthy: up and running",
+		})
+	})
+
 	r.POST("/tasks", func(c *gin.Context) {
 		var newTask models.Task
 

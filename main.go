@@ -12,5 +12,5 @@ func main() {
 
 	router.SetupRoutes(r)
 
-	r.Run(":4545")
+	r.Run(":3000")
 }
